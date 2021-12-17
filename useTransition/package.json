@@ -1,9 +1,0 @@
-{
-    "name": "useTransition",
-    "version": "1.0.0",
-    "description": "A lightweight transition hook",
-    "main": "src/index.js",
-    "repository": "git@github.com:benschoel/useTransition.git",
-    "author": "Ben Schoelkopf <thebenschoel@gmail.com>",
-    "license": "MIT"
-}
