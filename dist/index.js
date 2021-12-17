@@ -2,18 +2,23 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = _interopDefault(require('react'));
 
-var useTransition = function useTransition() {
-  var _React$useState = React.useState(1),
-      val = _React$useState[0],
-      setVal = _React$useState[1];
+var useTransition = function useTransition(config) {
+  var _React$useState = React.useState(0),
+      progress = _React$useState[0],
+      setProgress = _React$useState[1];
 
-  var foo = function foo() {
-    return setVal(val * 2);
+  var _in = function _in() {
+    setProgress(1);
+  };
+
+  var out = function out() {
+    setProgress(0);
   };
 
   return {
-    val: val,
-    foo: foo
+    "in": _in,
+    out: out,
+    progress: progress
   };
 };
 

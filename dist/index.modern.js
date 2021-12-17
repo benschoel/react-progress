@@ -1,13 +1,20 @@
 import React from 'react';
 
-const useTransition = () => {
-  const [val, setVal] = React.useState(1);
+const useTransition = config => {
+  const [progress, setProgress] = React.useState(0);
 
-  const foo = () => setVal(val * 2);
+  const _in = () => {
+    setProgress(1);
+  };
+
+  const out = () => {
+    setProgress(0);
+  };
 
   return {
-    val,
-    foo
+    in: _in,
+    out,
+    progress
   };
 };
 
